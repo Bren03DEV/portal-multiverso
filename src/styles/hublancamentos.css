@@ -1,0 +1,167 @@
+/* IMPORTAÇÃO DE FONTES */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Orbitron:wght@500;700&display=swap');
+
+/* RESET E CORPO DA PÁGINA */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a0a0a !important; /* Resolve o fundo branco */
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* CABEÇALHO CENTRALIZADO */
+.cabecalho {
+    width: 100%;
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 2px solid #7a3cff;
+    background: #0a0a0a;
+}
+
+.cabecalho h1 {
+    font-family: 'Orbitron', sans-serif;
+    color: #a259ff;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    color: #caa6ff !important;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* MENU DE NAVEGAÇÃO */
+.menu {
+    width: 100%;
+    background: #111;
+    padding: 15px 0;
+    margin-bottom: 40px;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu a {
+    color: #caa6ff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #fff;
+}
+
+/* CONTAINER PRINCIPAL (MAIN) */
+main {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap; /* Faz os lançamentos ficarem lado a lado */
+    justify-content: center;
+    gap: 30px;
+    padding-bottom: 60px;
+}
+
+/* ESTILIZAÇÃO CLASSES DE LANÇAMENTO */
+.gusta_lanc, .fabbin_lanc, .piscalk_lanc, .fayu_lanc, .knd_lanc {
+    background: #111;
+    border: 1px solid #1a1a1a;
+    border-radius: 15px;
+    padding: 25px;
+    width: 320px; /* Largura fixa para virar um card */
+    text-align: center;
+    transition: 0.3s;
+}
+
+.gusta_lanc:hover, .fabbin_lanc:hover, .piscalk_lanc:hover, .fayu_lanc:hover, .knd_lanc:hover {
+    border-color: #7a3cff;
+    transform: translateY(-5px);
+}
+
+/* TÍTULOS DOS ÁLBUNS */
+.titulo_lancamento_iamgustaa, .titulo_lancamento_fabbin, 
+.titulo_lancamento_piscalk, .titulo_lancamento_fayu, .titulo_lancamento_knd {
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* IMAGENS DOS LANÇAMENTOS */
+.imagem-lancamento-gusta, .imagem-lancamento-fabbin, 
+.imagem-lancamento-piscalk, .imagem-lancamento-fayu, .imagem-lancamento-knd {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 8px;
+    border: 2px solid #7a3cff;
+    margin-bottom: 15px;
+}
+
+/* PARÁGRAFOS */
+.resumo_lancamento_gusta, .resumo_lancamento_fabbin, 
+.resumo_lancamento_piscalk, .resumo_lancamento_fayu, .resumo_lancamento_knd {
+    color: #cccccc !important;
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* O BOTÃO DAORA COM MAIS DETALHES */
+main a[href*="lancamentos"] {
+    display: inline-block;
+    padding: 12px 24px;
+    color: #a259ff; /* Roxo principal */
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+    /* Borda Neon */
+    border: 2px solid #7a3cff;
+    border-radius: 4px;
+    background: transparent;
+    
+    /* Efeito de brilho suave */
+    box-shadow: 0 0 10px rgba(122, 60, 255, 0.2);
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+/* EFEITO MOUSE */
+main a[href*="lancamentos"]:hover {
+    background-color: #7a3cff;
+    color: #ffffff;
+    
+    /* Brilho Intenso */
+    box-shadow: 0 0 25px rgba(122, 60, 255, 0.6), 
+                0 0 5px rgba(255, 255, 255, 0.4);
+    
+    transform: translateY(-3px); /* Levanta levemente o botão */
+}
+
+/* REMOVENDO LINHAS E CORES ESTRANHAS DOS LINKS */
+main a {
+    outline: none;
+}
+
+main a:hover {
+    background: #7a3cff;
+    color: #fff;
+}

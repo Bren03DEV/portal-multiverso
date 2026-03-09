@@ -1,0 +1,149 @@
+/* IMPORTAÇÃO DAS FONTES PADRÃO VRZ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Orbitron:wght@500;700&display=swap');
+
+/* RESET GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a0a0a !important; /* Fundo preto absoluto */
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+}
+
+/* LINK DE ACESSIBILIDADE */
+a[href="#conteudo_principal"] {
+    position: absolute;
+    top: -100px;
+    background: #a259ff;
+    color: white;
+    padding: 10px;
+    z-index: 1000;
+}
+
+a[href="#conteudo_principal"]:focus {
+    top: 0;
+}
+
+/* HEADER - CABEÇALHO */
+.cabecalho {
+    text-align: center;
+    padding: 50px 0;
+    border-bottom: 2px solid #7a3cff;
+}
+
+.cabecalho h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    color: #a259ff;
+    letter-spacing: 5px;
+    text-shadow: 0 0 15px rgba(162, 89, 255, 0.5);
+}
+
+.subtitulo {
+    color: #caa6ff;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* MENU DE NAVEGAÇÃO */
+.menu {
+    background: #111;
+    padding: 15px 0;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 35px;
+}
+
+.menu a {
+    color: #caa6ff;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #a259ff;
+}
+
+/* MAIN - CONTEÚDO DA NOTÍCIA 4 (O ÁLBUM DO FABBIN) */
+main#conteudo_principal.noticiaquatroparagr {
+    max-width: 850px;
+    margin: 0 auto 80px auto;
+    padding: 40px;
+    background: #121212;
+    border-radius: 15px;
+    
+    /* Efeito de Borda Neon com Gradiente */
+    border-left: 5px solid;
+    border-image: linear-gradient(to bottom, #a259ff, #1DB954) 1; 
+    
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* TÍTULO DA NOTÍCIA */
+h1.noticiaquatroparagr {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+    line-height: 1.3;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+/* TEXTO DA NOTÍCIA */
+p.noticiaquatroparagr {
+    color: #cccccc;
+    font-size: 1.1rem;
+    text-align: justify;
+    margin-bottom: 25px;
+}
+
+/* DESTAQUE PARA O NOME "POLICROMIA" */
+p.noticiaquatroparagr:contains("Policromia") {
+    color: #fff;
+    font-weight: 500;
+}
+
+/* BOTÃO DE VOLTAR */
+main.noticiaquatroparagr a[href*="index.html"] {
+    display: inline-block;
+    margin-top: 20px;
+    color: #a259ff;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Orbitron', sans-serif;
+    border: 1px solid #7a3cff;
+    padding: 12px 25px;
+    border-radius: 4px;
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+main.noticiaquatroparagr a[href*="index.html"]:hover {
+    background: #7a3cff;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(122, 60, 255, 0.4);
+    transform: translateX(-5px); /* Pequeno deslize para a esquerda no hover */
+}
+
+/* AJUSTE PARA MOBILE */
+@media (max-width: 768px) {
+    .cabecalho h1 { font-size: 2rem; }
+    main#conteudo_principal.noticiaquatroparagr { width: 92%; padding: 25px; }
+    h1.noticiaquatroparagr { font-size: 1.6rem; }
+}
